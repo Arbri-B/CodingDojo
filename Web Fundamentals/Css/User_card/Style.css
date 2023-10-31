@@ -1,0 +1,61 @@
+.blueDiv{
+    background-color: aqua;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.container{
+    width: 60%;
+    border: 1px solid silver;
+
+}
+
+.profilePic{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.size{
+    height: 20px;
+    width: 20px;
+}
+
+.info{
+    margin: 30px;
+
+    position: relative;
+    bottom: 70px;
+}
+
+a{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+a:visited{
+    color: blue;
+}
+
+h3{
+    text-align: center;
+}
+
+span{
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+.mid-div{
+    align-items: center;
+}
+
+.f-bold{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}

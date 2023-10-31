@@ -1,0 +1,41 @@
+img.octocat {
+    height: 200px;
+}
+
+.container{
+    background-color: lightblue;
+    display: block;
+    width: 1000px;
+}
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;   
+    margin: 20px;
+    padding: 20px;
+}
+
+.blue{
+    background-color: aqua;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.white{
+    background-color: white;
+    
+}
+
+h1{
+    font-size: 100px;
+    color: darkblue;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    color: rgb(99, 94, 94);
+}

@@ -1,0 +1,204 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* most used */
+.d-flex{
+    display: flex;
+}
+
+.flex1{
+   flex: 1; 
+}
+.bg-black{
+    background-color: black;
+}
+
+.t-white{
+    color: white;
+}
+
+/* specifics */
+
+body{
+    background-color: rgb(39, 33, 33);
+}
+
+/* header */
+.header{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-p{
+    text-align: center;
+    margin: 20px;
+    font-size: 1.5em;
+}
+
+#logo{
+    height: 6em;
+    width: 25em;
+}
+
+/* Navbar */
+
+.navbar{
+    background-image: linear-gradient(grey, black);
+    padding: 15px;
+
+}
+
+.navtext{
+    text-decoration: none;
+    margin: 5px;
+}
+
+/* Main image */
+
+.mainimg{
+    width: 100%;
+    border-bottom: 5px solid rgb(54, 52, 52);
+    display: block;
+}
+
+/* Block 1 */
+
+.block1{
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.s-around{
+    justify-content: space-around;
+}
+
+.t-orange{
+    color: orange;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+.icon{
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.b1{
+    margin: 25px;
+}
+
+/* Line 1 */
+
+.line1{  
+    background: repeating-linear-gradient(   
+        145deg,
+        #060811,
+        #11121c 2px,
+        #1a1b22 2px,
+        #151516 4px
+      );
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.l-content{
+    width: 60%;
+}
+
+.line-top{
+    font-size: 2em;
+}
+
+button{
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+
+/* Block 2 */
+
+h4{
+    font-size: 1.3em;
+}
+
+.block2{
+    justify-content: space-between;
+
+}
+
+.ancor{
+    align-self: flex-end;
+}
+
+
+
+/* Block 3 */
+
+.block3{
+    justify-content: space-between;
+}
+
+.img3{
+    border: 2px solid grey;
+    width: 100%;
+}
+
+.d3{
+    padding: 10px;
+    width: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.portofolio{
+    justify-content: space-between;
+    padding: 10px 70px;
+}
+

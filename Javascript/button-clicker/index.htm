@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojonary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <container class="con-main">
+        <header>
+            <nav class="navbar d-flex">
+                <h1>Dojonary</h1>
+                <input class="searchbar" type="text" placeholder="Search">
+                <button onclick="logOut(this)" class="btn btn-blue">Login</button>
+            </nav>
+        </header>
+
+        <main class="d-flex">
+            <container>
+                <div class="block d-flex">
+                    <div class="flex1">
+                        <h1>ninja</h1>
+                        <h3>noun</h3>
+                        <p>Plural : ninjas</p>
+                        <button onclick="alert('ninja was liked')" class="btn btn-yellow">13 likes</button>
+                    </div class="flex3">
+                    <p>A practitioner skilled in the <a href="">Japanese</a> art of <a href="">ninjustsu</a></p>
+                </div>
+                <div class="block d-flex">
+                    <div class="flex1">
+                        <h1>ninja</h1>
+                        <h3>noun</h3>
+                        <p>Plural : ninjas</p>
+                        <button onclick="alert('ninja was liked')" class="btn btn-yellow">37 likes</button>
+                    </div class="flex3">
+                    <p>A <a href="">programmer</a> who breaks down problems with <a href="">zen</a>-like focus</p>
+                </div>
+
+            </container>
+
+            <div class="block block3">
+                <h1>Dojonary is defined by <span>YOU</span></h1>
+                <button onclick="hide(this)" class="btn btn-green">Add definition</button>
+            </div>
+        </main>
+    </container>
+</body>
+<script src="script.js"></script>
+
+</html>

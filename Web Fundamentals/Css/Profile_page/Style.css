@@ -1,0 +1,148 @@
+.blueDiv{
+    background-color: aqua;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.container{
+    width: 60%;
+    justify-content: space-around;
+    margin: 20px 20%;
+}
+
+.profilePic{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    position: relative;
+    bottom: 70px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.size{
+    height: 20px;
+    width: 20px;
+}
+
+.info{
+    margin: 30px;
+}
+
+.e-profile{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+.e-profile:visited{
+    color: blue;
+}
+
+h3{
+    text-align: center;
+}
+
+span{
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+.mid-div{
+    align-items: center;
+}
+
+.f-bold{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.navbar{
+    width: 100%;
+    padding: 15px;
+    justify-content: space-around;
+
+}
+
+.nav-text{
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.part1{
+    justify-content: space-between;
+    flex: 3;
+    padding: 5px 15%;
+}
+
+.part2{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-right: 250px;
+}
+
+.b-sign{
+    background-color: rgb(40, 145, 145);
+    color: white;
+    font-size: x-large;
+    padding: 5px 15px;
+}
+
+.prof-text{
+    font-size: 3em;
+}
+
+.profilePic{
+    border-radius: 50%;
+}
+
+.picture{
+    border-radius: 50%;
+    height: 50px;
+}
+
+.border-s{
+    border: 3px solid silver;
+}
+
+.i-block{
+    display: inline-block;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+.bg-grey{
+    background-color: gray;
+}
+
+.s-profile{
+    padding: 5px 20px;
+}
+
+.rad-1{
+    border-radius: 50%;
+    width: 1.5em;
+    text-align: center;
+}
+
+.rad-2{
+    border-radius: 50%;
+    width: 2.5em;
+    text-align: center;
+}
+
+.undertext{
+    padding: 10px;
+}
+
+.left-bottom {
+    margin-top: 50px;
+}
+
