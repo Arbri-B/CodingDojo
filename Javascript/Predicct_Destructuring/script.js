@@ -1,40 +1,40 @@
-const cars = ['Tesla', 'Mercedes', 'Honda']
-const [ randomCar ] = cars
-const [ ,otherRandomCar ] = cars
-//Predict the output
-console.log(randomCar) //tesla
-console.log(otherRandomCar) //mercedes
+// const cars = ['Tesla', 'Mercedes', 'Honda']
+// const [ randomCar ] = cars
+// const [ ,otherRandomCar ] = cars
+// //Predict the output
+// console.log(randomCar) //tesla
+// console.log(otherRandomCar) //mercedes
 
-const employee = {
-    name: 'Elon',
-    age: 47,
-    company: 'Tesla'
-}
-const { name: otherName } = employee;
-//Predict the output
-console.log(name); //unasigned
-console.log(otherName); //Elon
+// const employee = {
+//     name: 'Elon',
+//     age: 47,
+//     company: 'Tesla'
+// }
+// const { name: otherName } = employee;
+// //Predict the output
+// console.log(name); //unasigned
+// console.log(otherName); //Elon
 
-const person = {
-    name: 'Phil Smith',
-    age: 47,
-    height: '6 feet'
- }
+// const person = {
+//     name: 'Phil Smith',
+//     age: 47,
+//     height: '6 feet'
+//  }
 
-const password = '12345';
-const { password: hashedPassword } = person;  
-//Predict the output
-console.log(password); // 12345
-console.log(hashedPassword); // 12345
+// const password = '12345';
+// const { password: hashedPassword } = person;  
+// //Predict the output
+// console.log(password); // 12345
+// console.log(hashedPassword); // sdel
 
 
-const numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
-const [,first] = numbers; //2
-const [,,,second] = numbers; //5
-const [,,,,,,,,third] = numbers; //2
-//Predict the output
-console.log(first == second); //false
-console.log(first == third); //true
+// const numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
+// const [,first] = numbers; //2
+// const [,,,second] = numbers; //5
+// const [,,,,,,,,third] = numbers; //2
+// //Predict the output
+// console.log(first == second); //false
+// console.log(first == third); //true
 
 
 const lastTest = {
