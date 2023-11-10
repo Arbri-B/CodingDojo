@@ -73,8 +73,8 @@
                             Todd E
                         </span>
                         <span>
-                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick="remove1()">
-                            <img src="icons/close-circle.png" alt="close" class="icon" onclick="remove1()">
+                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick="remove1();change1()">
+                            <img src="icons/close-circle.png" alt="close" class="icon" onclick="remove1();change2()">
                         </span>
                     </li>
                     <li class="card-list-item" id="li-second">
@@ -83,8 +83,8 @@
                             Phil E
                         </span>
                         <span>
-                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick="remove2()">
-                            <img src="icons/close-circle.png" alt="close" class="icon" onclick="remove2()">
+                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick="remove2();change1()">
+                            <img src="icons/close-circle.png" alt="close" class="icon" onclick="remove2();change2()">
                         </span>
                     </li>
                 </ul>
@@ -93,7 +93,7 @@
             <!-- your connections card -->
             <div class="card">
                 <div class="card-header">
-                    <span class="badge">500+</span>
+                    <span class="badge" id="badge2">500+</span>
                     <h3>Your Connections</h3>
                 </div>
                 <ul class="card-list">
