@@ -7,10 +7,10 @@ function App() {
 
   return (
     <>
-      <PersonCard lastName = {"Doe"} firstName = {"Jane"} age = {"45"} hairColor = {"black"}/>
-      <PersonCard lastName = {"Smith"} firstName = {"John"} age = {"88"} hairColor = {"brown"}/>
-      <PersonCard lastName = {"Fillmore"} firstName = {"Millard"} age = {"50"} hairColor = {"brown"}/>
-      <PersonCard lastName = {"Smith"} firstName = {"Maria"} age = {"62"} hairColor = {"brown"}/>
+      <PersonCard lastName = {"Doe"} firstName = {"Jane"} age = {45} hairColor = {"black"}/>
+      <PersonCard lastName = {"Smith"} firstName = {"John"} age = {88} hairColor = {"brown"}/>
+      <PersonCard lastName = {"Fillmore"} firstName = {"Millard"} age = {50} hairColor = {"brown"}/>
+      <PersonCard lastName = {"Smith"} firstName = {"Maria"} age = {62} hairColor = {"brown"}/>
     </>
   )
 }
