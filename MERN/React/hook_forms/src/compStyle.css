@@ -1,0 +1,33 @@
+.block{
+    background-color: rgb(209, 201, 201);
+    padding: 5px;
+    margin: 20px;
+    display: flex;
+
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.formHolder{
+    width:30%;
+    margin: auto;
+}
+
+.displayHolder{
+    width:20%;
+    margin: auto;
+    align-items: center ;
+}
+
+.textInput{
+    margin-left: 10px;
+    height: 2em;
+    width:16em;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.lab{
+    width: 5em;
+}
