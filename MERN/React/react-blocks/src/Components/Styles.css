@@ -1,0 +1,54 @@
+.app {
+    text-align: center;
+    background-color: #dddddd;
+    height: 100%;
+    padding: 20px;
+
+}
+
+.headStyle {
+    background-color: #6aa84f;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+.mainStyle {
+    background-color: #e06666;
+    width: 75%;
+    padding: 20px;
+}
+
+.navStyle {
+    background-color: #6fa8dc;
+    width: 25%;
+    height: 400px;
+}
+
+.subContainer{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.subStyle{
+    background-color: #ffd966;
+    height: 300px;
+    width: 33%;
+}
+
+
+.addStyle{
+    background-color: #b4a7d6;
+    height: 150px;
+}
+
+
