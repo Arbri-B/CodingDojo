@@ -1,11 +1,12 @@
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 const Pokemonat = () => {
 
-        const [pokemon, setPokemon] = useState([]);
+    const [pokemon, setPokemon] = useState([]);
+    const [error, setError] = useState("");
 
-        useEffect(() => {
-            fetch('https://pokeapi.co/api/v2/pokemon?limit=807')
+    useEffect(() => {
+        fetch('https://pokeapi.co/api/v2/pokemon?limit=807')
             .then(response => {
                 return response.json()
             })
@@ -14,20 +15,24 @@ const Pokemonat = () => {
             })
             .catch((err) => {
                 console.log(err);
+                setError("You done messed up AARON")
             })
-        }, [] );
+    }, []);
 
 
-    return(
+    return (
         <div>
+
             <ul>
-                {
-                    pokemon.map((pokemonObj, index) => {
-                        return (<li key={index}>{pokemonObj.name}</li>)
-                    }
-                    )
+                {error === "" ? (
+                    pokemon.map((pokemonObj, index) => (
+                        <li key={index}>{pokemonObj.name}</li>
+                    ))
+                ) : <p>{error}</p>
                 }
             </ul>
+
+
         </div>
     )
 }
