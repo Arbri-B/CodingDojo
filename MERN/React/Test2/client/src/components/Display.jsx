@@ -5,7 +5,6 @@ import axios from "axios";
 const Display = () => {
     const [pirateList, setPirateList] = useState([]);
     const navigate = useNavigate();
-    const { id } = useParams();
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/pirates")
@@ -18,39 +17,39 @@ const Display = () => {
     }, []);
 
     const deletePirate = (pirateId) => {
-
-
         axios.delete(`http://localhost:8000/api/pirate/${pirateId}`)
             .then(res => {
-                setPirateList(prevPirates => prevPirates.filter(pirate => pirate.id !== pirateId));
+                setPirateList(pirateList.filter(pirate => pirate._id !== pirateId));
             })
             .catch(err => console.log(err));
     };
 
-
-    const viewPirate = (id) => {
-        navigate(`/pirate/${id}`);
+    const viewPirate = (pirateId) => {
+        navigate(`/pirate/${pirateId}`);
     };
 
-
-
-
     return (
-        <div>
+        <div className="total">
             <div className="header">
-                <h1>Pirate Crew</h1>
-                <Link to="/pirate/add">See Crew</Link>
+                <h1 className="main-text">Pirate Crew</h1>
+                <Link className="head-link" to="/pirate/add">Create a Pirate</Link>
             </div>
             <div className="resultDiv">
                 {pirateList && pirateList.length > 0 ? (
                     pirateList.map((pirate, index) => (
+                        
                         <div className="pirate-box" key={index}>
-                            {
-                                pirate.postition === "Captain"? <p>Captain</p> : null
-                            }
-                            <p>Name: {pirate.pirateName}</p>
-                            <button onClick={(e) => viewPirate(pirate.id)}>View Pirate</button>
-                            <button onClick={(e) => deletePirate(pirate.id)}>Walk the plank</button>
+                            {pirate.position === "Captain" ? <p className="golden">Captain</p> : null}
+                            
+                            <img src={pirate.imageUrl} alt={pirate.pirateName} width="200" height="250" />
+                            
+                            <div className="pb-content">
+                            <h3 className="name-tag">{pirate.pirateName}</h3>
+                            <div>
+                            <button className="button-pirate blue" onClick={() => viewPirate(pirate._id)}>View Pirate</button>
+                            <button className="button-pirate red" onClick={() => deletePirate(pirate._id)}>Walk the plank</button>
+                            </div>
+                            </div>
                         </div>
                     ))
                 ) : (

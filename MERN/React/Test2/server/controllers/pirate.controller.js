@@ -36,8 +36,9 @@ module.exports.findOneSinglePirate = (req, res) => {
 }
 
 module.exports.createNewPirate = (req, res) => {
+
     Pirate.create(req.body)
-        .then(newlyCreatedPirate => {
+        .then(newlyCreatedPirate => {   
             res.json({
                 pirate: newlyCreatedPirate
             })

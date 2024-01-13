@@ -13,7 +13,7 @@ const PirateSchema = new mongoose.Schema({
         required: [true, "The image URL is required"],
 
     },
-    treasureNumber: {
+    treasure: {
         type: Number,
     },
     catchPhrase: {
@@ -31,7 +31,13 @@ const PirateSchema = new mongoose.Schema({
     },
     hookHand: {
         type: Boolean,
-        default: false,
+        validate: {
+            validator: function (value) {
+                
+                return !value; 
+            },
+            message: 'No playing hooky in my crew!!!', 
+        },
     },
     position: {
         type: String,

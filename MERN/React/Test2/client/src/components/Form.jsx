@@ -51,7 +51,7 @@ const Form = (props) => {
                     setPegLeg(false);
                     setEyePatch(false);
                     setHookHand(false);
-                    setPosition('Sailer')
+                    setPosition("Sailer")
                 })
                 .catch(err => {
                     setErrorMessage("Your api has some problems!")
@@ -64,10 +64,10 @@ const Form = (props) => {
 
 
     return (
-        <div className="form-container">
+        <div className="total">
             <div className="header">
                 <h1 className="main-text">New Pirate</h1>
-                <Link className="header-link" to="/home">See Crew</Link>
+                <Link className="head-link" to="/home">See Crew</Link>
             </div>
 
             <div>
@@ -84,9 +84,12 @@ const Form = (props) => {
                         <label className="form-label">Pirate Name: </label>
                         <input className="form-control" type="text" value={pirateName} onChange={(e) => setPirateName(e.target.value)} placeholder="Enter the pirate name" />
                     </div>
-                    {pirateName.length > 0 && pirateName.length < 5 && pirateName.length > 30 ?
-                        <p className="red">The pirate name should be between 5 and 30 characters!</p> :
+                    {pirateName.length > 0 && pirateName.length < 5 ?
+                        <p className="red">The pirate name should be at leastcharacters!</p> :
                         null
+                    }
+                    {
+                        pirateName.length > 30 ?  <p className="red">The pirate name should be less than 30 characters!</p>  : null
                     }
                     <div>
                         <label className="form-label">Image URL: </label>

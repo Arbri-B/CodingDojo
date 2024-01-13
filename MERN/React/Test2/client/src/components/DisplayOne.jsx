@@ -19,35 +19,49 @@ const DisplayOne = (props) => {
     }, [id]);
 
     return (
-        <div className="card w-50 m-auto">
-            { pirate?
-                <div className="card-body">
-                    <div>
-                        <img src={pirate.imageUrl} alt={pirate.pirateName} width="500" height="600" />
-                        <Link to={`/pirate/edit/${pirate._id}`}> Edit {pirate.pirateName}</Link>
+        <div>
+            <div className="header">
+                <h1 className="main-text">{pirate.pirateName}</h1>
+                <Link className="head-link" to="/home">See Crew</Link>
+            </div>
+            <div className="card">
+                {
+                    <div className="card-body">
+                        <div>
+                            <img src={pirate.imageUrl} alt={pirate.pirateName} width="500" height="600" />
+
+                        </div>
+
+                        <div className="card-right">
+
+                            <div>
+                                <Link className="pirate-name" to={`/pirate/edit/${pirate._id}`}> Edit {pirate.pirateName}</Link>
+                            </div>
+                            <p className="card-text">Position: {pirate.position}</p>
+                            <p className="card-text">Treasures: {pirate.treasure}</p>
+                            {
+                                pirate.treasure > 10 && <p>Want to share?</p>
+                            }
+                            {
+                                pirate.treasure === 0 && <p>Here's a dollar?</p>
+                            }
+                            {
+                                pirate.pegLeg ? <p className="card-text">Peg Leg: Yes!</p>
+                                    : <p className="card-text">Peg Leg: No!</p>
+                            }
+                            {
+                                pirate.eyePatch ? <p className="card-text">Eye Patch: Yes!</p>
+                                    : <p className="card-text">Eye Patch: No!</p>
+                            }
+
+                            {
+                                pirate.hookHand ? <p className="card-text">Hook Hand: Yes!</p>
+                                    : <p className="card-text">Hook Hand: No!</p>
+                            }
+                        </div>
                     </div>
-                    <div className="d-flex justify-content-evenly">
-
-                    </div>
-
-                    <p className="card-text">Position: {pirate.position}</p>
-                    <p className="card-text">Treasures: {pirate.treasures}</p>
-                    {
-                        pirate.pegLeg ? <p className="card-text">Peg Leg: Yes!</p>
-                            : <p className="card-text">Peg Leg: No!</p>
-                    }
-                    {
-                        pirate.eyePatch ? <p className="card-text">Eye Patch: Yes!</p>
-                            : <p className="card-text">Eye Patch: No!</p>
-                    }
-
-                    {
-                        pirate.hookHand ? <p className="card-text">Hook Hand: Yes!</p>
-                            : <p className="card-text">Hook Hand: No!</p>
-                    }
-
-                </div> : <p>You have errors</p>
-            }
+                }
+            </div>
         </div>
     );
 };

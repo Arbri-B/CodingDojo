@@ -52,7 +52,7 @@ const Update = (props) => {
         }
         else {
 
-            axios.put(`http://localhost:8000/api/pirate/${pirate._id}`, {
+            axios.put(`http://localhost:8000/api/pirate/${id}`, {
                 pirateName,
                 imageUrl,
                 treasure,
@@ -89,49 +89,51 @@ const Update = (props) => {
     return (
         <div>
             <div className="header">
-                <h1>Update {pirate.pirateName}</h1>
-                <Link to="/home">See Crew</Link>
+                <h1 className="main-text">Update {pirate.pirateName}</h1>
+                <Link className="head-link" to="/home">See Crew</Link>
             </div>
-            <div className="form px-3">
-                <h1 className="text-center p-2">Update</h1>
+            <div className="update-form">
                 {
                     errorMessage ?
                         <p className="red text-center">{errorMessage}</p> :
                         null
                 }
 
-                <form className="w-75 m-auto" onSubmit={(e) => updatePirate(e)}>
-                    <div>
-                        <label className="form-label">Pirate Name: </label>
-                        <input className="form-control" type="text" value={pirateName} onChange={(e) => setPirateName(e.target.value)} placeholder="Enter the pirate name" />
+                <form className="form" onSubmit={(e) => updatePirate(e)}>
+                    <div className="form-left">
+                        <div>
+                            <label className="form-label">Pirate Name: </label>
+                            <input className="form-control" type="text" value={pirateName} onChange={(e) => setPirateName(e.target.value)} placeholder="Enter the pirate name" />
+                        </div>
+                        {pirateName.length > 0 && pirateName.length < 5 && pirateName.length > 30 ?
+                            <p className="red">The pirate name should be between 5 and 30 characters!</p> :
+                            null
+                        }
+                        <div>
+                            <label className="form-label">Image URL: </label>
+                            <input className="form-control" type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} placeholder="URL goes here" pattern="https?://.+"
+                                title="Include http:// or https:// in the URL" />
+                        </div>
+
+                        <div>
+                            <label className="form-label"># of Treasure: </label>
+                            <input className="form-control" type="number" value={treasure} onChange={(e) => setTreasure(e.target.value)} />
+                        </div>
+
+
+
+                        <div>
+                            <label className="form-label">Catch Phrase: </label>
+                            <input className="form-control" type="text" value={catchPhrase} onChange={(e) => setCatchPhrase(e.target.value)} placeholder="What do they say?" />
+                        </div>
+                        {catchPhrase.length > 0 && catchPhrase.length < 5 ?
+                            <p className="red">The catch phrase must be longer than 4 characters</p> :
+                            null
+                        }
+
                     </div>
-                    {pirateName.length > 0 && pirateName.length < 5 && pirateName.length > 30 ?
-                        <p className="red">The pirate name should be between 5 and 30 characters!</p> :
-                        null
-                    }
-                    <div>
-                        <label className="form-label">Image URL: </label>
-                        <input className="form-control" type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} placeholder="URL goes here" pattern="https?://.+"
-                            title="Include http:// or https:// in the URL" />
-                    </div>
 
-                    <div>
-                        <label className="form-label"># of Treasure: </label>
-                        <input className="form-control" type="number" value={treasure} onChange={(e) => setTreasure(e.target.value)} />
-                    </div>
-
-
-
-                    <div>
-                        <label className="form-label">Catch Phrase: </label>
-                        <input className="form-control" type="text" value={catchPhrase} onChange={(e) => setCatchPhrase(e.target.value)} placeholder="What do they say?" />
-                    </div>
-                    {catchPhrase.length > 0 && catchPhrase.length < 5 ?
-                        <p className="red">The catch phrase must be longer than 4 characters</p> :
-                        null
-                    }
-
-
+                    <div className="form-right">
 
                     <div>
                         <label className="form-label">Position: </label>
@@ -174,7 +176,8 @@ const Update = (props) => {
                         </label>
                     </div>
 
-                    <button className="btn btn-success mt-2">Update the student</button>
+                    <button className="btn btn-success mt-2">Update the Pirate</button>
+                    </div>
 
                 </form>
 
